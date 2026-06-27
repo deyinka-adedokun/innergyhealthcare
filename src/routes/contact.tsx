@@ -112,9 +112,23 @@ function ContactForm() {
     );
   }
   const input = "w-full border border-input bg-white px-3.5 py-2.5 rounded-sm text-sm focus:outline-none focus:ring-2 focus:ring-[var(--gold)]";
+  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const fd = new FormData(e.currentTarget);
+    const name = String(fd.get("cname") ?? "");
+    const email = String(fd.get("cemail") ?? "");
+    const subject = String(fd.get("csub") ?? "General Enquiry");
+    const message = String(fd.get("cmsg") ?? "");
+    const body =
+      `Name: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0A${encodeURIComponent(message)}`;
+    window.location.href = `mailto:info@innergyglobal.com?subject=${encodeURIComponent(
+      `[Website] ${subject}`,
+    )}&body=${body}`;
+    setDone(true);
+  };
   return (
     <form
-      onSubmit={(e) => { e.preventDefault(); setDone(true); }}
+      onSubmit={onSubmit}
       className="bg-white border border-border p-6 md:p-8 rounded-sm grid gap-5"
     >
       <div className="grid md:grid-cols-2 gap-5">
