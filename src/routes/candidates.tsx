@@ -14,7 +14,7 @@ export const Route = createFileRoute("/candidates")({
         content:
           "Qualified Nigerian healthcare professionals: prepare for UK and Ireland career opportunities through structured assessment and honest guidance.",
       },
-      { property: "og:title", content: "For Candidates — Innergy" },
+      { property: "og:title", content: "For Candidates — Innergy Healthcare" },
       {
         property: "og:description",
         content:
@@ -102,7 +102,7 @@ function CandidatesPage() {
               Build Your International Healthcare Career — With Proper Guidance
             </h1>
             <p className="mt-6 text-lg text-foreground/80 max-w-xl">
-              Innergy helps qualified Nigerian healthcare professionals prepare for career
+              Innergy Healthcare helps qualified Nigerian healthcare professionals prepare for career
               opportunities in the United Kingdom and Ireland through structured assessment, career
               readiness development, and ethical employer matching.
             </p>
@@ -158,7 +158,7 @@ function CandidatesPage() {
       </Section>
 
       <Section surface>
-        <SectionHeading eyebrow="What We Provide" title="How Innergy Supports Your Journey" />
+        <SectionHeading eyebrow="What We Provide" title="How Innergy Healthcare Supports Your Journey" />
         <ul className="grid md:grid-cols-2 gap-3 max-w-5xl">
           {supports.map((s) => (
             <li key={s} className="flex gap-3 bg-white border border-border p-4 rounded-sm">
@@ -190,7 +190,7 @@ function CandidatesPage() {
         <SectionHeading eyebrow="Important Information" title="Please Understand" />
         <div className="max-w-4xl space-y-5 text-foreground/85 text-[15px] leading-relaxed">
           <p>
-            Innergy does not sell jobs or visas. We do not guarantee employment outcomes.
+            Innergy Healthcare does not sell jobs or visas. We do not guarantee employment outcomes.
             International healthcare careers involve licensing requirements, immigration processes,
             employer decisions, and regulatory approvals that are beyond our control.
           </p>
@@ -265,7 +265,7 @@ function CandidateForm() {
         <Sel label="Have You Taken IELTS or OET?" name="english" options={["Yes", "No"]} />
         <F label="If Yes, What Score?" name="score" />
         <div className="md:col-span-2">
-          <F label="How Did You Hear About Innergy?" name="source" />
+          <F label="How Did You Hear About Innergy Healthcare?" name="source" />
         </div>
         <div className="md:col-span-2 flex flex-col">
           <label htmlFor="cv" className="text-sm font-medium text-navy mb-1.5">Upload CV (optional)</label>
@@ -274,7 +274,7 @@ function CandidateForm() {
         </div>
         <label className="md:col-span-2 flex items-start gap-3 text-sm text-foreground/80">
           <input type="checkbox" required className="mt-1 h-4 w-4 accent-[var(--navy)]" />
-          <span>I consent to Innergy storing my information to assess my application, in line with UK GDPR.</span>
+          <span>I consent to Innergy Healthcare storing my information to assess my application, in line with UK GDPR.</span>
         </label>
         <div className="md:col-span-2">
           <CTAButton type="submit" variant="gold">Submit Application</CTAButton>

@@ -6,13 +6,13 @@ import story from "@/assets/innergy/image11.jpeg.asset.json";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About — Innergy" },
+      { title: "About — Innergy Healthcare" },
       {
         name: "description",
         content:
-          "Innergy is a specialist healthcare talent management company connecting assessed Nigerian healthcare professionals with UK and Ireland employers.",
+          "Innergy Healthcare is a specialist healthcare talent management company connecting assessed Nigerian healthcare professionals with UK and Ireland employers.",
       },
-      { property: "og:title", content: "About — Innergy" },
+      { property: "og:title", content: "About — Innergy Healthcare" },
       { property: "og:description", content: "Ethical healthcare talent management built on psychometric assessment expertise." },
       { property: "og:url", content: "/about" },
       { property: "og:image", content: hero.url },
@@ -47,13 +47,13 @@ function AboutPage() {
         <div className="container-page py-16 md:py-20 grid lg:grid-cols-2 gap-12 items-center">
           <div>
             <div className="text-xs font-semibold uppercase tracking-[0.18em] text-[var(--gold)] mb-5">
-              About Innergy
+              About Innergy Healthcare
             </div>
             <h1 className="text-4xl md:text-5xl font-bold text-navy leading-[1.1]">
               Ethical Healthcare Talent Management
             </h1>
             <p className="mt-6 text-lg text-foreground/80 max-w-xl">
-              Innergy is a specialist healthcare talent management and outsourcing company focused
+              Innergy Healthcare is a specialist healthcare talent management and outsourcing company focused
               on connecting assessed and prepared Nigerian healthcare professionals with career
               opportunities in the United Kingdom and Ireland.
             </p>
@@ -72,7 +72,7 @@ function AboutPage() {
             />
             <div className="space-y-4 text-foreground/85 text-[15px] leading-relaxed">
               <p>
-                Innergy was established as a subsidiary of <strong className="text-navy">Psychotesting Enterprise</strong>, a
+                Innergy Healthcare was established as a subsidiary of <strong className="text-navy">Psychotesting Enterprise</strong>, a
                 human capital assessment and psychometric services organisation with experience in
                 behavioural evaluation, career profiling, and talent development across Nigerian
                 educational and healthcare institutions.
@@ -83,7 +83,7 @@ function AboutPage() {
                 qualified healthcare professionals each year, while the UK and Ireland face
                 critical shortages in care, nursing, and allied health.
               </p>
-              <p>Innergy was created to bridge this gap — responsibly.</p>
+              <p>Innergy Healthcare was created to bridge this gap — responsibly.</p>
               <p>
                 We combine Psychotesting Enterprise's assessment expertise with structured
                 international recruitment processes to ensure that candidates are not only
@@ -126,7 +126,7 @@ function AboutPage() {
       <Section surface>
         <SectionHeading
           eyebrow="Our Methodology"
-          title="The Innergy Assessment Methodology"
+          title="The Innergy Healthcare Assessment Methodology"
           intro="Our assessment process is built on the psychometric expertise of Psychotesting Enterprise and adapted specifically for international healthcare recruitment."
         />
         <div className="grid lg:grid-cols-[1fr_1.1fr] gap-12 items-center">
@@ -196,8 +196,9 @@ function MethodologyDiagram() {
         <circle cx={cx} cy={cy} r={rOuter - 30} fill="none" stroke="#003057" strokeOpacity="0.08" />
         {/* center */}
         <circle cx={cx} cy={cy} r={56} fill="#003057" />
-        <text x={cx} y={cy - 6} textAnchor="middle" fill="#D4A843" fontSize="14" fontWeight="700">INNERGY</text>
-        <text x={cx} y={cy + 12} textAnchor="middle" fill="white" fontSize="9" letterSpacing="2">ASSESSMENT</text>
+        <text x={cx} y={cy - 8} textAnchor="middle" fill="#D4A843" fontSize="13" fontWeight="700">INNERGY</text>
+        <text x={cx} y={cy + 6} textAnchor="middle" fill="#D4A843" fontSize="9" fontWeight="700" letterSpacing="1">HEALTHCARE</text>
+        <text x={cx} y={cy + 20} textAnchor="middle" fill="white" fontSize="8" letterSpacing="2">ASSESSMENT</text>
         {labels.map((label, i) => {
           const angle = (i / labels.length) * Math.PI * 2 - Math.PI / 2;
           const x = cx + Math.cos(angle) * rOuter;

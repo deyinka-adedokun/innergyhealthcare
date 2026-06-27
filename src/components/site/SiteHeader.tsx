@@ -17,9 +17,9 @@ export function SiteHeader() {
     <header className="sticky top-0 z-40 bg-navy text-navy-foreground border-b border-white/10">
       <div className="container-page flex items-center justify-between gap-6 py-3">
         <Link to="/" className="flex items-center gap-3 group" onClick={() => setOpen(false)}>
-          <img src={logoAsset.url} alt="Innergy" className="h-10 w-auto" />
+          <img src={logoAsset.url} alt="Innergy Healthcare" className="h-10 w-auto" />
           <span className="hidden sm:flex flex-col leading-tight">
-            <span className="text-base font-bold tracking-wide text-white">INNERGY</span>
+            <span className="text-base font-bold tracking-wide text-white">INNERGY HEALTHCARE</span>
             <span className="text-[10px] uppercase tracking-[0.18em] text-white/70">
               Talent Management &amp; Outsourcing
             </span>

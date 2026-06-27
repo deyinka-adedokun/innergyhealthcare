@@ -19,13 +19,13 @@ import biomed from "@/assets/innergy/image7.jpeg.asset.json";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Innergy — Quality Care Professionals. Properly Assessed." },
+      { title: "Innergy Healthcare — Quality Care Professionals. Properly Assessed." },
       {
         name: "description",
         content:
           "Ethical international healthcare recruitment connecting assessed Nigerian care professionals with UK and Ireland employers.",
       },
-      { property: "og:title", content: "Innergy — Quality Care Professionals" },
+      { property: "og:title", content: "Innergy Healthcare — Quality Care Professionals" },
       {
         property: "og:description",
         content:
@@ -125,7 +125,7 @@ function Home() {
               Quality Care Professionals. Properly Assessed. Professionally Prepared.
             </h1>
             <p className="mt-6 text-lg text-foreground/80 max-w-xl">
-              Innergy partners with UK and Ireland healthcare employers to source, assess, and
+              Innergy Healthcare partners with UK and Ireland healthcare employers to source, assess, and
               prepare dedicated care professionals from Nigeria — through structured psychometric
               evaluation, career readiness development, and ethical recruitment practices.
             </p>
@@ -166,7 +166,7 @@ function Home() {
           title="Structured Healthcare Talent Solutions"
           intro={
             <>
-              Innergy is a specialist healthcare talent management company that identifies,
+              Innergy Healthcare is a specialist healthcare talent management company that identifies,
               assesses, prepares, and connects qualified care professionals with employers across
               the United Kingdom and Ireland. We work with care homes, nursing homes, domiciliary
               care providers, NHS trusts, HSE-contracted facilities, and healthcare recruitment
@@ -225,9 +225,9 @@ function Home() {
         </div>
       </Section>
 
-      {/* Why Innergy */}
+      {/* Why Innergy Healthcare */}
       <Section>
-        <SectionHeading eyebrow="Why Innergy" title="Why Employers Choose Innergy" />
+        <SectionHeading eyebrow="Why Innergy Healthcare" title="Why Employers Choose Innergy Healthcare" />
         <div className="grid md:grid-cols-2 gap-x-10 gap-y-8">
           {values.map((v) => (
             <div key={v.title} className="flex gap-5">
