@@ -13,7 +13,7 @@ import {
 import hero from "@/assets/innergy/image3.jpeg.asset.json";
 import elderly from "@/assets/innergy/image4.jpeg.asset.json";
 import nursing from "@/assets/innergy/image5.jpeg.asset.json";
-import radio from "@/assets/innergy/image6.jpeg.asset.json";
+import radio from "@/assets/innergy/radiography-medical-imaging.jpg.asset.json";
 import biomed from "@/assets/innergy/image7.jpeg.asset.json";
 
 export const Route = createFileRoute("/")({
@@ -247,9 +247,9 @@ function Home() {
       <div className="bg-navy text-white">
         <div className="container-page py-12 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
           {[
-            { v: "[XX]", l: "Candidates Assessed" },
-            { v: "[XX]", l: "Employer Partners" },
-            { v: "[XX]", l: "Countries" },
+            { v: "632", l: "Candidates Assessed" },
+            { v: "02", l: "Employer Partners" },
+            { v: "02", l: "Countries" },
             { v: "100%", l: "Ethical Recruitment Commitment" },
           ].map((s) => (
             <div key={s.l}>
