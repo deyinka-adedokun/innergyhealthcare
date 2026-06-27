@@ -196,8 +196,9 @@ function MethodologyDiagram() {
         <circle cx={cx} cy={cy} r={rOuter - 30} fill="none" stroke="#003057" strokeOpacity="0.08" />
         {/* center */}
         <circle cx={cx} cy={cy} r={56} fill="#003057" />
-        <text x={cx} y={cy - 6} textAnchor="middle" fill="#D4A843" fontSize="14" fontWeight="700">INNERGY HEALTHCARE</text>
-        <text x={cx} y={cy + 12} textAnchor="middle" fill="white" fontSize="9" letterSpacing="2">ASSESSMENT</text>
+        <text x={cx} y={cy - 8} textAnchor="middle" fill="#D4A843" fontSize="13" fontWeight="700">INNERGY</text>
+        <text x={cx} y={cy + 6} textAnchor="middle" fill="#D4A843" fontSize="9" fontWeight="700" letterSpacing="1">HEALTHCARE</text>
+        <text x={cx} y={cy + 20} textAnchor="middle" fill="white" fontSize="8" letterSpacing="2">ASSESSMENT</text>
         {labels.map((label, i) => {
           const angle = (i / labels.length) * Math.PI * 2 - Math.PI / 2;
           const x = cx + Math.cos(angle) * rOuter;
