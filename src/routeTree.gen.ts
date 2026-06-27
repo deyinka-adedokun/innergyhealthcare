@@ -9,12 +9,30 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as TermsRouteImport } from './routes/terms'
+import { Route as PrivacyRouteImport } from './routes/privacy'
+import { Route as EthicalRecruitmentRouteImport } from './routes/ethical-recruitment'
 import { Route as EmployersRouteImport } from './routes/employers'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as CandidatesRouteImport } from './routes/candidates'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 
+const TermsRoute = TermsRouteImport.update({
+  id: '/terms',
+  path: '/terms',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyRoute = PrivacyRouteImport.update({
+  id: '/privacy',
+  path: '/privacy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EthicalRecruitmentRoute = EthicalRecruitmentRouteImport.update({
+  id: '/ethical-recruitment',
+  path: '/ethical-recruitment',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const EmployersRoute = EmployersRouteImport.update({
   id: '/employers',
   path: '/employers',
@@ -47,6 +65,9 @@ export interface FileRoutesByFullPath {
   '/candidates': typeof CandidatesRoute
   '/contact': typeof ContactRoute
   '/employers': typeof EmployersRoute
+  '/ethical-recruitment': typeof EthicalRecruitmentRoute
+  '/privacy': typeof PrivacyRoute
+  '/terms': typeof TermsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -54,6 +75,9 @@ export interface FileRoutesByTo {
   '/candidates': typeof CandidatesRoute
   '/contact': typeof ContactRoute
   '/employers': typeof EmployersRoute
+  '/ethical-recruitment': typeof EthicalRecruitmentRoute
+  '/privacy': typeof PrivacyRoute
+  '/terms': typeof TermsRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -62,13 +86,41 @@ export interface FileRoutesById {
   '/candidates': typeof CandidatesRoute
   '/contact': typeof ContactRoute
   '/employers': typeof EmployersRoute
+  '/ethical-recruitment': typeof EthicalRecruitmentRoute
+  '/privacy': typeof PrivacyRoute
+  '/terms': typeof TermsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/about' | '/candidates' | '/contact' | '/employers'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/candidates'
+    | '/contact'
+    | '/employers'
+    | '/ethical-recruitment'
+    | '/privacy'
+    | '/terms'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/candidates' | '/contact' | '/employers'
-  id: '__root__' | '/' | '/about' | '/candidates' | '/contact' | '/employers'
+  to:
+    | '/'
+    | '/about'
+    | '/candidates'
+    | '/contact'
+    | '/employers'
+    | '/ethical-recruitment'
+    | '/privacy'
+    | '/terms'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/candidates'
+    | '/contact'
+    | '/employers'
+    | '/ethical-recruitment'
+    | '/privacy'
+    | '/terms'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -77,10 +129,34 @@ export interface RootRouteChildren {
   CandidatesRoute: typeof CandidatesRoute
   ContactRoute: typeof ContactRoute
   EmployersRoute: typeof EmployersRoute
+  EthicalRecruitmentRoute: typeof EthicalRecruitmentRoute
+  PrivacyRoute: typeof PrivacyRoute
+  TermsRoute: typeof TermsRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/terms': {
+      id: '/terms'
+      path: '/terms'
+      fullPath: '/terms'
+      preLoaderRoute: typeof TermsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy': {
+      id: '/privacy'
+      path: '/privacy'
+      fullPath: '/privacy'
+      preLoaderRoute: typeof PrivacyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ethical-recruitment': {
+      id: '/ethical-recruitment'
+      path: '/ethical-recruitment'
+      fullPath: '/ethical-recruitment'
+      preLoaderRoute: typeof EthicalRecruitmentRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/employers': {
       id: '/employers'
       path: '/employers'
@@ -125,6 +201,9 @@ const rootRouteChildren: RootRouteChildren = {
   CandidatesRoute: CandidatesRoute,
   ContactRoute: ContactRoute,
   EmployersRoute: EmployersRoute,
+  EthicalRecruitmentRoute: EthicalRecruitmentRoute,
+  PrivacyRoute: PrivacyRoute,
+  TermsRoute: TermsRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
