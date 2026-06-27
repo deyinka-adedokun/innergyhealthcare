@@ -31,10 +31,10 @@ export function SiteFooter() {
         <div>
           <h3 className="text-white text-sm font-semibold uppercase tracking-wider mb-4">Programmes</h3>
           <ul className="space-y-2 text-sm text-white/80">
-            <li>Elderly Care</li>
-            <li>Nursing</li>
-            <li>Radiography</li>
-            <li>Biomedical Science</li>
+            <li><Link to="/candidates" hash="elderly" className="hover:text-[var(--gold)]">Elderly Care</Link></li>
+            <li><Link to="/candidates" hash="nursing" className="hover:text-[var(--gold)]">Nursing</Link></li>
+            <li><Link to="/candidates" hash="radiography" className="hover:text-[var(--gold)]">Radiography</Link></li>
+            <li><Link to="/candidates" hash="biomedical" className="hover:text-[var(--gold)]">Biomedical Science</Link></li>
           </ul>
         </div>
 
