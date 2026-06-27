@@ -11,10 +11,13 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as TermsRouteImport } from './routes/terms'
 import { Route as PrivacyRouteImport } from './routes/privacy'
+import { Route as ModernSlaveryRouteImport } from './routes/modern-slavery'
 import { Route as EthicalRecruitmentRouteImport } from './routes/ethical-recruitment'
 import { Route as EmployersRouteImport } from './routes/employers'
+import { Route as CookiesRouteImport } from './routes/cookies'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as CandidatesRouteImport } from './routes/candidates'
+import { Route as CandidateWelfareRouteImport } from './routes/candidate-welfare'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 
@@ -28,6 +31,11 @@ const PrivacyRoute = PrivacyRouteImport.update({
   path: '/privacy',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ModernSlaveryRoute = ModernSlaveryRouteImport.update({
+  id: '/modern-slavery',
+  path: '/modern-slavery',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const EthicalRecruitmentRoute = EthicalRecruitmentRouteImport.update({
   id: '/ethical-recruitment',
   path: '/ethical-recruitment',
@@ -38,6 +46,11 @@ const EmployersRoute = EmployersRouteImport.update({
   path: '/employers',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CookiesRoute = CookiesRouteImport.update({
+  id: '/cookies',
+  path: '/cookies',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ContactRoute = ContactRouteImport.update({
   id: '/contact',
   path: '/contact',
@@ -46,6 +59,11 @@ const ContactRoute = ContactRouteImport.update({
 const CandidatesRoute = CandidatesRouteImport.update({
   id: '/candidates',
   path: '/candidates',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CandidateWelfareRoute = CandidateWelfareRouteImport.update({
+  id: '/candidate-welfare',
+  path: '/candidate-welfare',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AboutRoute = AboutRouteImport.update({
@@ -62,20 +80,26 @@ const IndexRoute = IndexRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/candidate-welfare': typeof CandidateWelfareRoute
   '/candidates': typeof CandidatesRoute
   '/contact': typeof ContactRoute
+  '/cookies': typeof CookiesRoute
   '/employers': typeof EmployersRoute
   '/ethical-recruitment': typeof EthicalRecruitmentRoute
+  '/modern-slavery': typeof ModernSlaveryRoute
   '/privacy': typeof PrivacyRoute
   '/terms': typeof TermsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/candidate-welfare': typeof CandidateWelfareRoute
   '/candidates': typeof CandidatesRoute
   '/contact': typeof ContactRoute
+  '/cookies': typeof CookiesRoute
   '/employers': typeof EmployersRoute
   '/ethical-recruitment': typeof EthicalRecruitmentRoute
+  '/modern-slavery': typeof ModernSlaveryRoute
   '/privacy': typeof PrivacyRoute
   '/terms': typeof TermsRoute
 }
@@ -83,10 +107,13 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/candidate-welfare': typeof CandidateWelfareRoute
   '/candidates': typeof CandidatesRoute
   '/contact': typeof ContactRoute
+  '/cookies': typeof CookiesRoute
   '/employers': typeof EmployersRoute
   '/ethical-recruitment': typeof EthicalRecruitmentRoute
+  '/modern-slavery': typeof ModernSlaveryRoute
   '/privacy': typeof PrivacyRoute
   '/terms': typeof TermsRoute
 }
@@ -95,30 +122,39 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/about'
+    | '/candidate-welfare'
     | '/candidates'
     | '/contact'
+    | '/cookies'
     | '/employers'
     | '/ethical-recruitment'
+    | '/modern-slavery'
     | '/privacy'
     | '/terms'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/about'
+    | '/candidate-welfare'
     | '/candidates'
     | '/contact'
+    | '/cookies'
     | '/employers'
     | '/ethical-recruitment'
+    | '/modern-slavery'
     | '/privacy'
     | '/terms'
   id:
     | '__root__'
     | '/'
     | '/about'
+    | '/candidate-welfare'
     | '/candidates'
     | '/contact'
+    | '/cookies'
     | '/employers'
     | '/ethical-recruitment'
+    | '/modern-slavery'
     | '/privacy'
     | '/terms'
   fileRoutesById: FileRoutesById
@@ -126,10 +162,13 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
+  CandidateWelfareRoute: typeof CandidateWelfareRoute
   CandidatesRoute: typeof CandidatesRoute
   ContactRoute: typeof ContactRoute
+  CookiesRoute: typeof CookiesRoute
   EmployersRoute: typeof EmployersRoute
   EthicalRecruitmentRoute: typeof EthicalRecruitmentRoute
+  ModernSlaveryRoute: typeof ModernSlaveryRoute
   PrivacyRoute: typeof PrivacyRoute
   TermsRoute: typeof TermsRoute
 }
@@ -150,6 +189,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PrivacyRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/modern-slavery': {
+      id: '/modern-slavery'
+      path: '/modern-slavery'
+      fullPath: '/modern-slavery'
+      preLoaderRoute: typeof ModernSlaveryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/ethical-recruitment': {
       id: '/ethical-recruitment'
       path: '/ethical-recruitment'
@@ -164,6 +210,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof EmployersRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/cookies': {
+      id: '/cookies'
+      path: '/cookies'
+      fullPath: '/cookies'
+      preLoaderRoute: typeof CookiesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/contact': {
       id: '/contact'
       path: '/contact'
@@ -176,6 +229,13 @@ declare module '@tanstack/react-router' {
       path: '/candidates'
       fullPath: '/candidates'
       preLoaderRoute: typeof CandidatesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/candidate-welfare': {
+      id: '/candidate-welfare'
+      path: '/candidate-welfare'
+      fullPath: '/candidate-welfare'
+      preLoaderRoute: typeof CandidateWelfareRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/about': {
@@ -198,10 +258,13 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
+  CandidateWelfareRoute: CandidateWelfareRoute,
   CandidatesRoute: CandidatesRoute,
   ContactRoute: ContactRoute,
+  CookiesRoute: CookiesRoute,
   EmployersRoute: EmployersRoute,
   EthicalRecruitmentRoute: EthicalRecruitmentRoute,
+  ModernSlaveryRoute: ModernSlaveryRoute,
   PrivacyRoute: PrivacyRoute,
   TermsRoute: TermsRoute,
 }
