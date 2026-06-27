@@ -134,16 +134,16 @@ function ContactForm() {
       <div className="grid md:grid-cols-2 gap-5">
         <div className="flex flex-col">
           <label htmlFor="cname" className="text-sm font-medium text-navy mb-1.5">Name<span className="text-[var(--alert)] ml-0.5">*</span></label>
-          <input id="cname" required className={input} />
+          <input id="cname" name="cname" required className={input} />
         </div>
         <div className="flex flex-col">
           <label htmlFor="cemail" className="text-sm font-medium text-navy mb-1.5">Email<span className="text-[var(--alert)] ml-0.5">*</span></label>
-          <input id="cemail" type="email" required className={input} />
+          <input id="cemail" name="cemail" type="email" required className={input} />
         </div>
       </div>
       <div className="flex flex-col">
         <label htmlFor="csub" className="text-sm font-medium text-navy mb-1.5">Subject<span className="text-[var(--alert)] ml-0.5">*</span></label>
-        <select id="csub" required defaultValue="" className={input}>
+        <select id="csub" name="csub" required defaultValue="" className={input}>
           <option value="" disabled>Please select</option>
           {["Employer Enquiry", "Candidate Enquiry", "Partnership", "Media", "Other"].map((o) => (
             <option key={o} value={o}>{o}</option>
@@ -152,7 +152,7 @@ function ContactForm() {
       </div>
       <div className="flex flex-col">
         <label htmlFor="cmsg" className="text-sm font-medium text-navy mb-1.5">Message<span className="text-[var(--alert)] ml-0.5">*</span></label>
-        <textarea id="cmsg" rows={6} required className={input} />
+        <textarea id="cmsg" name="cmsg" rows={6} required className={input} />
       </div>
       <label className="flex items-start gap-3 text-sm text-foreground/80">
         <input type="checkbox" required className="mt-1 h-4 w-4 accent-[var(--navy)]" />
