@@ -41,7 +41,8 @@ export function SiteHeader() {
 
         <div className="hidden lg:block">
           <Link
-            to="/contact"
+            to="/employers"
+            hash="enquiry"
             className="inline-flex items-center justify-center bg-[var(--gold)] text-[var(--navy)] font-semibold text-sm px-4 py-2.5 rounded-sm hover:bg-[var(--gold)]/90 transition-colors"
           >
             Partner With Us
@@ -71,7 +72,8 @@ export function SiteHeader() {
               </Link>
             ))}
             <Link
-              to="/contact"
+              to="/employers"
+              hash="enquiry"
               onClick={() => setOpen(false)}
               className="mt-3 inline-flex items-center justify-center bg-[var(--gold)] text-[var(--navy)] font-semibold text-sm px-4 py-3 rounded-sm"
             >

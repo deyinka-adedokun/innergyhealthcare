@@ -238,6 +238,22 @@ function EmployerForm() {
 
   const submit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const fd = new FormData(e.currentTarget);
+    const get = (k: string) => String(fd.get(k) ?? "");
+    const body = [
+      `Organisation: ${get("org")}`,
+      `Contact: ${get("name")} (${get("title")})`,
+      `Email: ${get("email")}`,
+      `Phone: ${get("phone")}`,
+      `Roles needed: ${get("roles")}`,
+      `Approx. vacancies: ${get("vacancies")}`,
+      `Preferred timeline: ${get("timeline")}`,
+      "",
+      get("message"),
+    ].join("\n");
+    window.location.href = `mailto:partnerships@innergyglobal.com?subject=${encodeURIComponent(
+      `[Employer Enquiry] ${get("org")}`,
+    )}&body=${encodeURIComponent(body)}`;
     setDone(true);
   };
 

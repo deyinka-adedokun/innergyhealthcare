@@ -26,17 +26,17 @@ const cards = [
   {
     title: "Employer Partnerships",
     body: "For care homes, nursing homes, NHS trusts, HSE facilities, and recruitment agencies.",
-    email: "partnerships@innergyhealthcare.com",
+    email: "partnerships@innergyglobal.com",
   },
   {
     title: "Candidate Enquiries",
     body: "For healthcare professionals interested in career pathways.",
-    email: "careers@innergyhealthcare.com",
+    email: "careers@innergyglobal.com",
   },
   {
     title: "General Enquiries",
     body: "For media, partnerships, institutional collaboration, and other matters.",
-    email: "info@innergyhealthcare.com",
+    email: "info@innergyglobal.com",
   },
 ];
 
@@ -78,13 +78,19 @@ function ContactPage() {
           <aside className="bg-navy text-white p-8 rounded-sm">
             <div className="flex items-center gap-3 mb-4">
               <MapPin className="h-5 w-5 text-[var(--gold)]" />
-              <h3 className="text-lg font-semibold text-white">Office Address</h3>
+              <h3 className="text-lg font-semibold text-white">Nigerian Office</h3>
             </div>
             <p className="text-white/80 text-[15px] leading-relaxed">
-              [Your Address]
+              H16, Alafia Estate,<br />Ibadan, Nigeria
             </p>
             <div className="mt-6 pt-6 border-t border-white/10 text-sm text-white/70">
-              <p>A Psychotesting Enterprise Company</p>
+              <p>
+                Web:{" "}
+                <a href="https://innergyglobal.com" className="text-[var(--gold)] hover:underline">
+                  innergyglobal.com
+                </a>
+              </p>
+              <p className="mt-3">A Psychotesting Enterprise Company</p>
               <p className="mt-2">Innergy is committed to ethical international healthcare recruitment.</p>
             </div>
           </aside>
@@ -106,24 +112,38 @@ function ContactForm() {
     );
   }
   const input = "w-full border border-input bg-white px-3.5 py-2.5 rounded-sm text-sm focus:outline-none focus:ring-2 focus:ring-[var(--gold)]";
+  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const fd = new FormData(e.currentTarget);
+    const name = String(fd.get("cname") ?? "");
+    const email = String(fd.get("cemail") ?? "");
+    const subject = String(fd.get("csub") ?? "General Enquiry");
+    const message = String(fd.get("cmsg") ?? "");
+    const body =
+      `Name: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0A${encodeURIComponent(message)}`;
+    window.location.href = `mailto:info@innergyglobal.com?subject=${encodeURIComponent(
+      `[Website] ${subject}`,
+    )}&body=${body}`;
+    setDone(true);
+  };
   return (
     <form
-      onSubmit={(e) => { e.preventDefault(); setDone(true); }}
+      onSubmit={onSubmit}
       className="bg-white border border-border p-6 md:p-8 rounded-sm grid gap-5"
     >
       <div className="grid md:grid-cols-2 gap-5">
         <div className="flex flex-col">
           <label htmlFor="cname" className="text-sm font-medium text-navy mb-1.5">Name<span className="text-[var(--alert)] ml-0.5">*</span></label>
-          <input id="cname" required className={input} />
+          <input id="cname" name="cname" required className={input} />
         </div>
         <div className="flex flex-col">
           <label htmlFor="cemail" className="text-sm font-medium text-navy mb-1.5">Email<span className="text-[var(--alert)] ml-0.5">*</span></label>
-          <input id="cemail" type="email" required className={input} />
+          <input id="cemail" name="cemail" type="email" required className={input} />
         </div>
       </div>
       <div className="flex flex-col">
         <label htmlFor="csub" className="text-sm font-medium text-navy mb-1.5">Subject<span className="text-[var(--alert)] ml-0.5">*</span></label>
-        <select id="csub" required defaultValue="" className={input}>
+        <select id="csub" name="csub" required defaultValue="" className={input}>
           <option value="" disabled>Please select</option>
           {["Employer Enquiry", "Candidate Enquiry", "Partnership", "Media", "Other"].map((o) => (
             <option key={o} value={o}>{o}</option>
@@ -132,7 +152,7 @@ function ContactForm() {
       </div>
       <div className="flex flex-col">
         <label htmlFor="cmsg" className="text-sm font-medium text-navy mb-1.5">Message<span className="text-[var(--alert)] ml-0.5">*</span></label>
-        <textarea id="cmsg" rows={6} required className={input} />
+        <textarea id="cmsg" name="cmsg" rows={6} required className={input} />
       </div>
       <label className="flex items-start gap-3 text-sm text-foreground/80">
         <input type="checkbox" required className="mt-1 h-4 w-4 accent-[var(--navy)]" />
