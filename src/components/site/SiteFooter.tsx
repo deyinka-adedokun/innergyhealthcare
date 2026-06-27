@@ -7,7 +7,7 @@ export function SiteFooter() {
       <div className="container-page py-14 grid gap-10 md:grid-cols-2 lg:grid-cols-5">
         <div className="lg:col-span-2">
           <div className="flex items-center gap-3 mb-4">
-            <img src={logoAsset.url} alt="Innergy Healthcare" className="h-12 w-auto" />
+            <img src={logoAsset.url} alt="Innergy Healthcare" className="h-12 w-auto brightness-0 invert" />
             <div className="leading-tight">
               <div className="text-base font-bold tracking-wide text-white">INNERGY HEALTHCARE</div>
               <div className="text-[10px] uppercase tracking-[0.18em] text-white/70">
