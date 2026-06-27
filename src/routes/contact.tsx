@@ -78,13 +78,19 @@ function ContactPage() {
           <aside className="bg-navy text-white p-8 rounded-sm">
             <div className="flex items-center gap-3 mb-4">
               <MapPin className="h-5 w-5 text-[var(--gold)]" />
-              <h3 className="text-lg font-semibold text-white">Office Address</h3>
+              <h3 className="text-lg font-semibold text-white">Nigerian Office</h3>
             </div>
             <p className="text-white/80 text-[15px] leading-relaxed">
-              [Your Address]
+              H16, Alafia Estate,<br />Ibadan, Nigeria
             </p>
             <div className="mt-6 pt-6 border-t border-white/10 text-sm text-white/70">
-              <p>A Psychotesting Enterprise Company</p>
+              <p>
+                Web:{" "}
+                <a href="https://innergyglobal.com" className="text-[var(--gold)] hover:underline">
+                  innergyglobal.com
+                </a>
+              </p>
+              <p className="mt-3">A Psychotesting Enterprise Company</p>
               <p className="mt-2">Innergy is committed to ethical international healthcare recruitment.</p>
             </div>
           </aside>
