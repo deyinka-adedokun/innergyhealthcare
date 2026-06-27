@@ -247,9 +247,9 @@ function Home() {
       <div className="bg-navy text-white">
         <div className="container-page py-12 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
           {[
-            { v: "[XX]", l: "Candidates Assessed" },
-            { v: "[XX]", l: "Employer Partners" },
-            { v: "[XX]", l: "Countries" },
+            { v: "632", l: "Candidates Assessed" },
+            { v: "02", l: "Employer Partners" },
+            { v: "02", l: "Countries" },
             { v: "100%", l: "Ethical Recruitment Commitment" },
           ].map((s) => (
             <div key={s.l}>
