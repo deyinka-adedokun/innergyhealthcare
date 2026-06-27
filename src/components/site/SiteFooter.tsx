@@ -43,7 +43,7 @@ export function SiteFooter() {
           <ul className="space-y-2 text-sm text-white/80">
             <li><Link to="/about" className="hover:text-[var(--gold)]">About</Link></li>
             <li><Link to="/contact" className="hover:text-[var(--gold)]">Contact</Link></li>
-            <li><a href="mailto:info@innergyhealthcare.com" className="hover:text-[var(--gold)]">Email</a></li>
+            <li><a href="mailto:info@innergyglobal.com" className="hover:text-[var(--gold)]">Email</a></li>
           </ul>
         </div>
       </div>

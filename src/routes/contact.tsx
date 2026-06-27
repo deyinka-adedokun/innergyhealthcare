@@ -26,17 +26,17 @@ const cards = [
   {
     title: "Employer Partnerships",
     body: "For care homes, nursing homes, NHS trusts, HSE facilities, and recruitment agencies.",
-    email: "partnerships@innergyhealthcare.com",
+    email: "partnerships@innergyglobal.com",
   },
   {
     title: "Candidate Enquiries",
     body: "For healthcare professionals interested in career pathways.",
-    email: "careers@innergyhealthcare.com",
+    email: "careers@innergyglobal.com",
   },
   {
     title: "General Enquiries",
     body: "For media, partnerships, institutional collaboration, and other matters.",
-    email: "info@innergyhealthcare.com",
+    email: "info@innergyglobal.com",
   },
 ];
 
