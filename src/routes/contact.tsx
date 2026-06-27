@@ -7,14 +7,14 @@ import { Mail, MapPin } from "lucide-react";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — Innergy" },
+      { title: "Contact — Innergy Healthcare" },
       {
         name: "description",
         content:
-          "Contact Innergy — employer partnerships, candidate enquiries, and general healthcare recruitment questions.",
+          "Contact Innergy Healthcare — employer partnerships, candidate enquiries, and general healthcare recruitment questions.",
       },
-      { property: "og:title", content: "Contact — Innergy" },
-      { property: "og:description", content: "Get in touch with Innergy's partnerships, candidate, and general enquiries teams." },
+      { property: "og:title", content: "Contact — Innergy Healthcare" },
+      { property: "og:description", content: "Get in touch with Innergy Healthcare's partnerships, candidate, and general enquiries teams." },
       { property: "og:url", content: "/contact" },
     ],
     links: [{ rel: "canonical", href: "/contact" }],
@@ -91,7 +91,7 @@ function ContactPage() {
                 </a>
               </p>
               <p className="mt-3">A Psychotesting Enterprise Company</p>
-              <p className="mt-2">Innergy is committed to ethical international healthcare recruitment.</p>
+              <p className="mt-2">Innergy Healthcare is committed to ethical international healthcare recruitment.</p>
             </div>
           </aside>
         </div>
@@ -156,7 +156,7 @@ function ContactForm() {
       </div>
       <label className="flex items-start gap-3 text-sm text-foreground/80">
         <input type="checkbox" required className="mt-1 h-4 w-4 accent-[var(--navy)]" />
-        <span>I consent to Innergy processing my information to respond to this enquiry, in line with UK GDPR.</span>
+        <span>I consent to Innergy Healthcare processing my information to respond to this enquiry, in line with UK GDPR.</span>
       </label>
       <div>
         <CTAButton type="submit" variant="gold">Send Message</CTAButton>

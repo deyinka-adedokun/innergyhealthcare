@@ -14,7 +14,7 @@ export const Route = createFileRoute("/employers")({
         content:
           "UK and Ireland healthcare employers: access psychometrically assessed, ethically sourced care professionals from Nigeria.",
       },
-      { property: "og:title", content: "For Employers — Innergy" },
+      { property: "og:title", content: "For Employers — Innergy Healthcare" },
       {
         property: "og:description",
         content:
@@ -79,7 +79,7 @@ function EmployersPage() {
               Solve Your Care Staffing Challenge With Properly Assessed Professionals
             </h1>
             <p className="mt-6 text-lg text-foreground/80 max-w-xl">
-              Innergy provides UK and Ireland healthcare employers with access to psychometrically
+              Innergy Healthcare provides UK and Ireland healthcare employers with access to psychometrically
               assessed, professionally prepared, and ethically sourced care talent from Nigeria.
             </p>
             <div className="mt-8">
@@ -125,7 +125,7 @@ function EmployersPage() {
           </div>
         </div>
         <p className="mt-8 text-foreground/85 max-w-4xl">
-          Innergy addresses these challenges at the source — by assessing candidates before they are
+          Innergy Healthcare addresses these challenges at the source — by assessing candidates before they are
           introduced to employers, not after.
         </p>
       </Section>
@@ -209,7 +209,7 @@ function EmployersPage() {
         <SectionHeading
           eyebrow="Compliance & Ethics"
           title="Our Ethical Commitment"
-          intro="Innergy is committed to responsible international recruitment. We operate in alignment with the following principles:"
+          intro="Innergy Healthcare is committed to responsible international recruitment. We operate in alignment with the following principles:"
         />
         <ul className="grid md:grid-cols-2 gap-4 max-w-5xl">
           {ethics.map((e) => (
@@ -284,7 +284,7 @@ function EmployerForm() {
       <label className="md:col-span-2 flex items-start gap-3 text-sm text-foreground/80">
         <input type="checkbox" required className="mt-1 h-4 w-4 accent-[var(--navy)]" />
         <span>
-          I consent to Innergy processing my information to respond to this enquiry, in line with
+          I consent to Innergy Healthcare processing my information to respond to this enquiry, in line with
           UK GDPR.
         </span>
       </label>

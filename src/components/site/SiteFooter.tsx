@@ -7,9 +7,9 @@ export function SiteFooter() {
       <div className="container-page py-14 grid gap-10 md:grid-cols-4">
         <div>
           <div className="flex items-center gap-3 mb-4">
-            <img src={logoAsset.url} alt="Innergy" className="h-12 w-auto" />
+            <img src={logoAsset.url} alt="Innergy Healthcare" className="h-12 w-auto" />
             <div className="leading-tight">
-              <div className="text-base font-bold tracking-wide text-white">INNERGY</div>
+              <div className="text-base font-bold tracking-wide text-white">INNERGY HEALTHCARE</div>
               <div className="text-[10px] uppercase tracking-[0.18em] text-white/70">
                 Talent Management &amp; Outsourcing
               </div>
@@ -49,8 +49,8 @@ export function SiteFooter() {
       </div>
       <div className="border-t border-white/10">
         <div className="container-page py-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-3 text-xs text-white/60">
-          <p>© {new Date().getFullYear()} Innergy. All rights reserved.</p>
-          <p>Innergy is committed to ethical international healthcare recruitment.</p>
+          <p>© {new Date().getFullYear()} Innergy Healthcare. All rights reserved.</p>
+          <p>Innergy Healthcare is committed to ethical international healthcare recruitment.</p>
         </div>
       </div>
     </footer>

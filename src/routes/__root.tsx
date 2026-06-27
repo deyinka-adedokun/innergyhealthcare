@@ -76,13 +76,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Innergy — Ethical Healthcare Talent for UK & Ireland" },
+      { title: "Innergy Healthcare — Ethical Healthcare Talent for UK & Ireland" },
       {
         name: "description",
         content:
-          "Innergy identifies, assesses, prepares, and connects Nigerian healthcare professionals with UK and Ireland employers.",
+          "Innergy Healthcare identifies, assesses, prepares, and connects Nigerian healthcare professionals with UK and Ireland employers.",
       },
-      { property: "og:site_name", content: "Innergy" },
+      { property: "og:site_name", content: "Innergy Healthcare" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
