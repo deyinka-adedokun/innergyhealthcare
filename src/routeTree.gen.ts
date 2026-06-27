@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as EmployersRouteImport } from './routes/employers'
 import { Route as CandidatesRouteImport } from './routes/candidates'
+import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 
 const EmployersRoute = EmployersRouteImport.update({
@@ -23,6 +24,11 @@ const CandidatesRoute = CandidatesRouteImport.update({
   path: '/candidates',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -31,30 +37,34 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
   '/candidates': typeof CandidatesRoute
   '/employers': typeof EmployersRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
   '/candidates': typeof CandidatesRoute
   '/employers': typeof EmployersRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
   '/candidates': typeof CandidatesRoute
   '/employers': typeof EmployersRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/candidates' | '/employers'
+  fullPaths: '/' | '/about' | '/candidates' | '/employers'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/candidates' | '/employers'
-  id: '__root__' | '/' | '/candidates' | '/employers'
+  to: '/' | '/about' | '/candidates' | '/employers'
+  id: '__root__' | '/' | '/about' | '/candidates' | '/employers'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
   CandidatesRoute: typeof CandidatesRoute
   EmployersRoute: typeof EmployersRoute
 }
@@ -75,6 +85,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CandidatesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -87,6 +104,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
   CandidatesRoute: CandidatesRoute,
   EmployersRoute: EmployersRoute,
 }
