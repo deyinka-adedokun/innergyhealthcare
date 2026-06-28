@@ -49,10 +49,10 @@ function AboutPage() {
             <div className="text-xs font-semibold uppercase tracking-[0.18em] text-[var(--gold)] mb-5">
               About Innergy Healthcare
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold text-navy leading-[1.1]">
+            <h1 className="text-4xl md:text-5xl font-bold text-navy leading-[1.1] text-balance">
               Ethical Healthcare Talent Management
             </h1>
-            <p className="mt-6 text-lg text-foreground/80 max-w-xl">
+            <p className="mt-6 text-lg text-foreground/80 max-w-xl text-pretty">
               Innergy Healthcare is a specialist healthcare talent management and outsourcing company focused
               on connecting assessed and prepared Nigerian healthcare professionals with career
               opportunities in the United Kingdom and Ireland.

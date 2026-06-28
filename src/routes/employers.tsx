@@ -75,10 +75,10 @@ function EmployersPage() {
             <div className="text-xs font-semibold uppercase tracking-[0.18em] text-[var(--gold)] mb-5">
               For UK &amp; Ireland Healthcare Employers
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold text-navy leading-[1.1]">
+            <h1 className="text-4xl md:text-5xl font-bold text-navy leading-[1.1] text-balance">
               Solve Your Care Staffing Challenge With Properly Assessed Professionals
             </h1>
-            <p className="mt-6 text-lg text-foreground/80 max-w-xl">
+            <p className="mt-6 text-lg text-foreground/80 max-w-xl text-pretty">
               Innergy Healthcare provides UK and Ireland healthcare employers with access to psychometrically
               assessed, professionally prepared, and ethically sourced care talent from Nigeria.
             </p>

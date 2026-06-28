@@ -41,10 +41,10 @@ function ResourcesPage() {
           <div className="text-xs font-semibold uppercase tracking-[0.18em] text-[var(--gold)] mb-5">
             Resources
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold text-navy max-w-3xl">
+          <h1 className="text-4xl md:text-5xl font-bold text-navy max-w-3xl text-balance">
             Insight on ethical healthcare recruitment, candidate readiness, and UK clinical practice.
           </h1>
-          <p className="mt-5 text-lg text-foreground/80 max-w-2xl">
+          <p className="mt-5 text-lg text-foreground/80 max-w-2xl text-pretty">
             Practical guidance for employers building international healthcare teams and for
             professionals preparing for UK and Ireland practice.
           </p>
