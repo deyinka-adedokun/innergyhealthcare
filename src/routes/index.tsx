@@ -10,7 +10,7 @@ import {
   Users,
   LifeBuoy,
 } from "lucide-react";
-import hero from "@/assets/innergy/image3.jpeg.asset.json";
+import hero from "@/assets/innergy/hero-care-professional.jpg.asset.json";
 import elderly from "@/assets/innergy/image4.jpeg.asset.json";
 import nursing from "@/assets/innergy/image5.jpeg.asset.json";
 import radio from "@/assets/innergy/radiography-medical-imaging.jpg.asset.json";
