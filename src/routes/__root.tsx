@@ -92,6 +92,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:description", content: "Innergy Talent Connect is a professional healthcare recruitment website for UK and Ireland employers and Nigerian healthcare professionals." },
       { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/581e3a99-91d7-424c-8689-30d8d4b50802/id-preview-dc6c0fee--6badf06e-d8c2-40da-af63-a58f341124d7.lovable.app-1782575958842.png" },
       { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/581e3a99-91d7-424c-8689-30d8d4b50802/id-preview-dc6c0fee--6badf06e-d8c2-40da-af63-a58f341124d7.lovable.app-1782575958842.png" },
+      { name: "theme-color", content: "#003057" },
     ],
     links: [
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -101,6 +102,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap",
       },
       { rel: "stylesheet", href: appCss },
+      { rel: "manifest", href: "/manifest.webmanifest" },
+      { rel: "apple-touch-icon", sizes: "192x192", href: "/icon-192x192.png" },
     ],
   }),
   shellComponent: RootShell,
