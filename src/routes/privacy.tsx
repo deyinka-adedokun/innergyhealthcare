@@ -35,7 +35,7 @@ function PrivacyPage() {
       <p><strong>Registered Address:</strong> H16, Alafia Estate, Ibadan, Nigeria</p>
       <p>
         <strong>Data Protection Officer:</strong><br />
-        Email: <a href="mailto:dpo@innergyhealthcare.com" className="text-[var(--teal)] hover:underline">dpo@innergyhealthcare.com</a>
+        Email: <a href="mailto:info@innergyhealthcare.com" className="text-[var(--teal)] hover:underline">info@innergyhealthcare.com</a>
       </p>
       <p>
         We are committed to protecting and respecting your privacy. This Privacy Policy explains how we collect,
