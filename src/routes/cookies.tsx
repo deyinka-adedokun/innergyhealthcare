@@ -5,7 +5,7 @@ export const Route = createFileRoute("/cookies")({
   head: () => ({
     meta: [
       { title: "Cookie Policy — Innergy Healthcare" },
-      { name: "description", content: "How Innergy Healthcare uses cookies on innergyglobal.com — essential, analytics, preference, security, and marketing cookies, and how to manage them." },
+      { name: "description", content: "How Innergy Healthcare uses cookies on innergyhealthcare.com — essential, analytics, preference, security, and marketing cookies, and how to manage them." },
       { property: "og:title", content: "Cookie Policy — Innergy Healthcare" },
       { property: "og:url", content: "/cookies" },
     ],
@@ -54,7 +54,7 @@ function CookiePage() {
       <PH2>5. Contact</PH2>
       <p>
         For questions about our use of cookies, email{" "}
-        <a href="mailto:privacy@innergyglobal.com" className="text-[var(--teal)] hover:underline">privacy@innergyglobal.com</a>.
+        <a href="mailto:privacy@innergyhealthcare.com" className="text-[var(--teal)] hover:underline">privacy@innergyhealthcare.com</a>.
       </p>
     </PolicyLayout>
   );

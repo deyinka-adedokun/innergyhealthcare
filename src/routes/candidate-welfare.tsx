@@ -37,7 +37,7 @@ function WelfarePage() {
         We do not charge placement fees, referral fees, or recruitment commissions to candidates. If anyone
         representing themselves as Innergy Healthcare asks you to pay money in exchange for a job offer, please
         report this to us immediately at{" "}
-        <a href="mailto:compliance@innergyglobal.com" className="text-[var(--teal)] hover:underline">compliance@innergyglobal.com</a>.
+        <a href="mailto:compliance@innergyhealthcare.com" className="text-[var(--teal)] hover:underline">compliance@innergyhealthcare.com</a>.
       </p>
 
       <PH3>2. We Will Be Honest With You at All Times</PH3>
@@ -89,7 +89,7 @@ function WelfarePage() {
       <p>If at any point during your engagement with Innergy Healthcare you feel pressured or coerced, misled or deceived, exploited or treated unfairly, or unsafe or vulnerable — please contact us immediately:</p>
       <p>
         <strong>Candidate Welfare Officer</strong><br />
-        Email: <a href="mailto:welfare@innergyglobal.com" className="text-[var(--teal)] hover:underline">welfare@innergyglobal.com</a>
+        Email: <a href="mailto:welfare@innergyhealthcare.com" className="text-[var(--teal)] hover:underline">welfare@innergyhealthcare.com</a>
       </p>
       <p>All reports are handled confidentially, and you will not face any negative consequences for raising a genuine concern.</p>
     </PolicyLayout>
