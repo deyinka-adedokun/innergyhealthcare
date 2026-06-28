@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as TermsRouteImport } from './routes/terms'
+import { Route as ResourcesRouteImport } from './routes/resources'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as ModernSlaveryRouteImport } from './routes/modern-slavery'
 import { Route as EthicalRecruitmentRouteImport } from './routes/ethical-recruitment'
@@ -20,10 +21,16 @@ import { Route as CandidatesRouteImport } from './routes/candidates'
 import { Route as CandidateWelfareRouteImport } from './routes/candidate-welfare'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ResourcesSlugRouteImport } from './routes/resources.$slug'
 
 const TermsRoute = TermsRouteImport.update({
   id: '/terms',
   path: '/terms',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ResourcesRoute = ResourcesRouteImport.update({
+  id: '/resources',
+  path: '/resources',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PrivacyRoute = PrivacyRouteImport.update({
@@ -76,6 +83,11 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ResourcesSlugRoute = ResourcesSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => ResourcesRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -88,7 +100,9 @@ export interface FileRoutesByFullPath {
   '/ethical-recruitment': typeof EthicalRecruitmentRoute
   '/modern-slavery': typeof ModernSlaveryRoute
   '/privacy': typeof PrivacyRoute
+  '/resources': typeof ResourcesRouteWithChildren
   '/terms': typeof TermsRoute
+  '/resources/$slug': typeof ResourcesSlugRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -101,7 +115,9 @@ export interface FileRoutesByTo {
   '/ethical-recruitment': typeof EthicalRecruitmentRoute
   '/modern-slavery': typeof ModernSlaveryRoute
   '/privacy': typeof PrivacyRoute
+  '/resources': typeof ResourcesRouteWithChildren
   '/terms': typeof TermsRoute
+  '/resources/$slug': typeof ResourcesSlugRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -115,7 +131,9 @@ export interface FileRoutesById {
   '/ethical-recruitment': typeof EthicalRecruitmentRoute
   '/modern-slavery': typeof ModernSlaveryRoute
   '/privacy': typeof PrivacyRoute
+  '/resources': typeof ResourcesRouteWithChildren
   '/terms': typeof TermsRoute
+  '/resources/$slug': typeof ResourcesSlugRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -130,7 +148,9 @@ export interface FileRouteTypes {
     | '/ethical-recruitment'
     | '/modern-slavery'
     | '/privacy'
+    | '/resources'
     | '/terms'
+    | '/resources/$slug'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -143,7 +163,9 @@ export interface FileRouteTypes {
     | '/ethical-recruitment'
     | '/modern-slavery'
     | '/privacy'
+    | '/resources'
     | '/terms'
+    | '/resources/$slug'
   id:
     | '__root__'
     | '/'
@@ -156,7 +178,9 @@ export interface FileRouteTypes {
     | '/ethical-recruitment'
     | '/modern-slavery'
     | '/privacy'
+    | '/resources'
     | '/terms'
+    | '/resources/$slug'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -170,6 +194,7 @@ export interface RootRouteChildren {
   EthicalRecruitmentRoute: typeof EthicalRecruitmentRoute
   ModernSlaveryRoute: typeof ModernSlaveryRoute
   PrivacyRoute: typeof PrivacyRoute
+  ResourcesRoute: typeof ResourcesRouteWithChildren
   TermsRoute: typeof TermsRoute
 }
 
@@ -180,6 +205,13 @@ declare module '@tanstack/react-router' {
       path: '/terms'
       fullPath: '/terms'
       preLoaderRoute: typeof TermsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/resources': {
+      id: '/resources'
+      path: '/resources'
+      fullPath: '/resources'
+      preLoaderRoute: typeof ResourcesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/privacy': {
@@ -252,8 +284,27 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/resources/$slug': {
+      id: '/resources/$slug'
+      path: '/$slug'
+      fullPath: '/resources/$slug'
+      preLoaderRoute: typeof ResourcesSlugRouteImport
+      parentRoute: typeof ResourcesRoute
+    }
   }
 }
+
+interface ResourcesRouteChildren {
+  ResourcesSlugRoute: typeof ResourcesSlugRoute
+}
+
+const ResourcesRouteChildren: ResourcesRouteChildren = {
+  ResourcesSlugRoute: ResourcesSlugRoute,
+}
+
+const ResourcesRouteWithChildren = ResourcesRoute._addFileChildren(
+  ResourcesRouteChildren,
+)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
@@ -266,6 +317,7 @@ const rootRouteChildren: RootRouteChildren = {
   EthicalRecruitmentRoute: EthicalRecruitmentRoute,
   ModernSlaveryRoute: ModernSlaveryRoute,
   PrivacyRoute: PrivacyRoute,
+  ResourcesRoute: ResourcesRouteWithChildren,
   TermsRoute: TermsRoute,
 }
 export const routeTree = rootRouteImport
