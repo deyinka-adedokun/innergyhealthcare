@@ -189,7 +189,7 @@ function PrivacyPage() {
       </PUL>
       <p>
         To exercise any right, contact our Data Protection Officer at{" "}
-        <a href="mailto:dpo@innergyhealthcare.com" className="text-[var(--teal)] hover:underline">dpo@innergyhealthcare.com</a>. Response within 30 days of receipt.
+        <a href="mailto:info@innergyhealthcare.com" className="text-[var(--teal)] hover:underline">info@innergyhealthcare.com</a>. Response within 30 days of receipt.
       </p>
 
       <PH2>11. Security</PH2>
