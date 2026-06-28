@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { CTAButton, CTALink } from "@/components/site/CTA";
 import { Section, SectionHeading } from "@/components/site/Section";
-import { CheckCircle2 } from "lucide-react";
+import { CheckCircle2, Phone } from "lucide-react";
 import hero from "@/assets/innergy/image8.jpeg.asset.json";
 
 export const Route = createFileRoute("/employers")({
