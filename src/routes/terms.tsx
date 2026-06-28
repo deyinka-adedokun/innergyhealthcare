@@ -27,7 +27,7 @@ function TermsPage() {
     >
       <PH2>1. Introduction</PH2>
       <p>
-        These Terms of Service ("Terms") govern your use of Innergy Healthcare's website at innergyglobal.com and
+        These Terms of Service ("Terms") govern your use of Innergy Healthcare's website at innergyhealthcare.com and
         the services provided by Innergy Healthcare Talent Management &amp; Outsourcing ("Innergy Healthcare", "we",
         "us", "our"). By accessing our website or engaging our services, you agree to be bound by these Terms.
       </p>
@@ -169,7 +169,7 @@ function TermsPage() {
         <li>Continued engagement that creates legal or reputational risk</li>
       </PUL>
       <PH3>13.2 Termination by You</PH3>
-      <p>You may withdraw at any time by providing written notice to <a href="mailto:info@innergyglobal.com" className="text-[var(--teal)] hover:underline">info@innergyglobal.com</a>.</p>
+      <p>You may withdraw at any time by providing written notice to <a href="mailto:info@innergyhealthcare.com" className="text-[var(--teal)] hover:underline">info@innergyhealthcare.com</a>.</p>
 
       <PH2>14. Governing Law and Dispute Resolution</PH2>
       <p>These Terms are governed by the laws of the Federal Republic of Nigeria.</p>
@@ -192,7 +192,7 @@ function TermsPage() {
       <PH2>18. Contact</PH2>
       <p>
         Innergy Healthcare Talent Management &amp; Outsourcing<br />
-        Email: <a href="mailto:info@innergyglobal.com" className="text-[var(--teal)] hover:underline">info@innergyglobal.com</a><br />
+        Email: <a href="mailto:info@innergyhealthcare.com" className="text-[var(--teal)] hover:underline">info@innergyhealthcare.com</a><br />
         Address: H16, Alafia Estate, Ibadan, Nigeria<br />
         Phone: 09052052136
       </p>

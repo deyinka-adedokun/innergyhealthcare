@@ -35,11 +35,11 @@ function PrivacyPage() {
       <p><strong>Registered Address:</strong> H16, Alafia Estate, Ibadan, Nigeria</p>
       <p>
         <strong>Data Protection Officer:</strong><br />
-        Email: <a href="mailto:dpo@innergyglobal.com" className="text-[var(--teal)] hover:underline">dpo@innergyglobal.com</a>
+        Email: <a href="mailto:dpo@innergyhealthcare.com" className="text-[var(--teal)] hover:underline">dpo@innergyhealthcare.com</a>
       </p>
       <p>
         We are committed to protecting and respecting your privacy. This Privacy Policy explains how we collect,
-        use, store, share, and protect your personal data when you visit our website at innergyglobal.com, submit
+        use, store, share, and protect your personal data when you visit our website at innergyhealthcare.com, submit
         an expression of interest as a candidate, engage with us as an employer or institutional partner, or
         communicate with us by email, phone, or other means.
       </p>
@@ -189,7 +189,7 @@ function PrivacyPage() {
       </PUL>
       <p>
         To exercise any right, contact our Data Protection Officer at{" "}
-        <a href="mailto:dpo@innergyglobal.com" className="text-[var(--teal)] hover:underline">dpo@innergyglobal.com</a>. Response within 30 days of receipt.
+        <a href="mailto:dpo@innergyhealthcare.com" className="text-[var(--teal)] hover:underline">dpo@innergyhealthcare.com</a>. Response within 30 days of receipt.
       </p>
 
       <PH2>11. Security</PH2>

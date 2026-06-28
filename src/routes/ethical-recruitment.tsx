@@ -131,7 +131,7 @@ function EthicalPage() {
       <PH2>6. Grievance and Whistleblowing Mechanism</PH2>
       <p>
         <strong>Compliance Officer:</strong><br />
-        Email: <a href="mailto:info@innergyglobal.com" className="text-[var(--teal)] hover:underline">info@innergyglobal.com</a><br />
+        Email: <a href="mailto:info@innergyhealthcare.com" className="text-[var(--teal)] hover:underline">info@innergyhealthcare.com</a><br />
         Phone: 09052052136
       </p>
       <p>All reports are acknowledged within 48 hours, investigated confidentially and impartially, and resolved with written outcome notification within 30 days. We guarantee no retaliation for genuine, good-faith reports.</p>

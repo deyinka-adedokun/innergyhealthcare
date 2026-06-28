@@ -265,7 +265,7 @@ function EmployerForm() {
       "",
       get("message"),
     ].join("\n");
-    window.location.href = `mailto:partnerships@innergyglobal.com?subject=${encodeURIComponent(
+    window.location.href = `mailto:partnerships@innergyhealthcare.com?subject=${encodeURIComponent(
       `[Employer Enquiry] ${get("org")}`,
     )}&body=${encodeURIComponent(body)}`;
     setDone(true);

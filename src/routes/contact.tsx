@@ -26,17 +26,17 @@ const cards = [
   {
     title: "Employer Partnerships",
     body: "For care homes, nursing homes, NHS trusts, HSE facilities, and recruitment agencies.",
-    email: "partnerships@innergyglobal.com",
+    email: "partnerships@innergyhealthcare.com",
   },
   {
     title: "Candidate Enquiries",
     body: "For healthcare professionals interested in career pathways.",
-    email: "careers@innergyglobal.com",
+    email: "careers@innergyhealthcare.com",
   },
   {
     title: "General Enquiries",
     body: "For media, partnerships, institutional collaboration, and other matters.",
-    email: "info@innergyglobal.com",
+    email: "info@innergyhealthcare.com",
   },
 ];
 
@@ -86,8 +86,8 @@ function ContactPage() {
             <div className="mt-6 pt-6 border-t border-white/10 text-sm text-white/70">
               <p>
                 Web:{" "}
-                <a href="https://innergyglobal.com" className="text-[var(--gold)] hover:underline">
-                  innergyglobal.com
+                <a href="https://innergyhealthcare.com" className="text-[var(--gold)] hover:underline">
+                  innergyhealthcare.com
                 </a>
               </p>
               <p className="mt-3">A Psychotesting Enterprise Company</p>
@@ -121,7 +121,7 @@ function ContactForm() {
     const message = String(fd.get("cmsg") ?? "");
     const body =
       `Name: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0A${encodeURIComponent(message)}`;
-    window.location.href = `mailto:info@innergyglobal.com?subject=${encodeURIComponent(
+    window.location.href = `mailto:info@innergyhealthcare.com?subject=${encodeURIComponent(
       `[Website] ${subject}`,
     )}&body=${body}`;
     setDone(true);
