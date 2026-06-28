@@ -161,35 +161,38 @@ function Home() {
 
       {/* What We Do */}
       <Section>
-        <SectionHeading
-          eyebrow="What We Do"
-          title="Structured Healthcare Talent Solutions"
-          intro={
-            <>
-              Innergy Healthcare is a specialist healthcare talent management company that identifies,
-              assesses, prepares, and connects qualified care professionals with employers across
-              the United Kingdom and Ireland. We work with care homes, nursing homes, domiciliary
-              care providers, NHS trusts, HSE-contracted facilities, and healthcare recruitment
-              agencies to address critical workforce shortages — particularly in elderly care,
-              nursing, and allied health.
-            </>
-          }
-        />
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="mb-10">
+          <div className="text-xs font-semibold uppercase tracking-[0.18em] text-[var(--gold)] mb-3">
+            What We Do
+          </div>
+          <h2 className="text-3xl md:text-4xl font-bold text-navy max-w-3xl">
+            Structured Healthcare Talent Solutions
+          </h2>
+          <p className="mt-4 text-base md:text-lg text-foreground/80 text-pretty">
+            Innergy Healthcare is a specialist healthcare talent management company that identifies,
+            assesses, prepares, and connects qualified care professionals with employers across
+            the United Kingdom and Ireland. We work with care homes, nursing homes, domiciliary
+            care providers, NHS trusts, HSE-contracted facilities, and healthcare recruitment
+            agencies to address critical workforce shortages — particularly in elderly care,
+            nursing, and allied health.
+          </p>
+        </div>
+        <div className="grid md:grid-cols-3 gap-6 items-stretch">
           {pillars.map((p) => (
             <div
               key={p.title}
-              className="bg-white border border-border p-8 rounded-sm hover:border-[var(--gold)] transition-colors"
+              className="bg-white border border-border p-8 rounded-sm hover:border-[var(--gold)] transition-colors flex flex-col h-full"
             >
               <div className="h-12 w-12 grid place-items-center bg-[var(--gold-tint)] text-[var(--navy)] rounded-sm mb-5">
                 <p.icon className="h-6 w-6" />
               </div>
               <h3 className="text-xl font-semibold mb-3">{p.title}</h3>
-              <p className="text-foreground/80 text-[15px]">{p.body}</p>
+              <p className="text-foreground/80 text-[15px] text-pretty">{p.body}</p>
             </div>
           ))}
         </div>
       </Section>
+
 
       {/* Programmes */}
       <Section surface>
