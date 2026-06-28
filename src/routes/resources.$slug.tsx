@@ -91,14 +91,14 @@ function ArticlePage() {
 
       <Section>
         <article className="max-w-3xl mx-auto prose-article">
-          {article.body.map((block, i) => (
+          {article.body.map((block: { heading?: string; paragraphs: string[] }, i: number) => (
             <div key={i} className="mb-8">
               {block.heading && (
                 <h2 className="text-xl md:text-2xl font-semibold text-navy mt-10 mb-4">
                   {block.heading}
                 </h2>
               )}
-              {block.paragraphs.map((p, j) => (
+              {block.paragraphs.map((p: string, j: number) => (
                 <p key={j} className="text-foreground/85 leading-relaxed mb-4 text-[16px]">
                   {p}
                 </p>
