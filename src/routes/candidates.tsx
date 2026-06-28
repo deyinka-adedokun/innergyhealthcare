@@ -98,10 +98,10 @@ function CandidatesPage() {
             <div className="text-xs font-semibold uppercase tracking-[0.18em] text-[var(--gold)] mb-5">
               For Nigerian Healthcare Professionals
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold text-navy leading-[1.1]">
+            <h1 className="text-4xl md:text-5xl font-bold text-navy leading-[1.1] text-balance">
               Build Your International Healthcare Career — With Proper Guidance
             </h1>
-            <p className="mt-6 text-lg text-foreground/80 max-w-xl">
+            <p className="mt-6 text-lg text-foreground/80 max-w-xl text-pretty">
               Innergy Healthcare helps qualified Nigerian healthcare professionals prepare for career
               opportunities in the United Kingdom and Ireland through structured assessment, career
               readiness development, and ethical employer matching.

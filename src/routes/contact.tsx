@@ -48,8 +48,8 @@ function ContactPage() {
           <div className="text-xs font-semibold uppercase tracking-[0.18em] text-[var(--gold)] mb-5">
             Contact
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold text-navy leading-[1.1]">Get in Touch</h1>
-          <p className="mt-6 text-lg text-foreground/80">
+          <h1 className="text-4xl md:text-5xl font-bold text-navy leading-[1.1] text-balance">Get in Touch</h1>
+          <p className="mt-6 text-lg text-foreground/80 text-pretty">
             Whether you are an employer seeking care professionals, a recruitment partner exploring
             collaboration, or a healthcare professional interested in our career pathways, we
             welcome your enquiry.
