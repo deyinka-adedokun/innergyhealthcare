@@ -147,28 +147,18 @@ function AboutPage() {
       </Section>
 
       <Section>
-        <SectionHeading eyebrow="Leadership" title="Leadership" />
-        <div className="grid md:grid-cols-3 gap-6">
-          {[
-            ["[Name]", "Founder & CEO"],
-            ["[Name]", "Director of Operations"],
-            ["[Name]", "Head of Assessment"],
-          ].map(([n, r]) => (
-            <div key={r} className="bg-white border border-border p-7 rounded-sm">
-              <div className="h-32 w-32 rounded-full bg-surface border border-border grid place-items-center text-warm-grey text-xs mx-auto mb-5">
-                Photo
-              </div>
-              <div className="text-center">
-                <div className="text-lg font-semibold text-navy">{n}</div>
-                <div className="text-sm text-[var(--gold)] font-semibold mt-1">{r}</div>
-                <p className="text-sm text-foreground/70 mt-3">Brief bio</p>
-              </div>
-            </div>
-          ))}
+        <SectionHeading eyebrow="Leadership" title="Our Leadership" />
+        <div className="bg-white border border-border rounded-sm p-10 md:p-14 text-center max-w-3xl mx-auto">
+          <div className="inline-flex h-14 w-14 rounded-full bg-[var(--gold-tint)] border border-[var(--gold)]/40 items-center justify-center text-[var(--gold)] font-bold text-xl mb-5">
+            ✦
+          </div>
+          <h3 className="text-2xl font-semibold text-navy">Leadership profiles coming soon</h3>
+          <p className="mt-4 text-foreground/75 max-w-xl mx-auto">
+            We are finalising the biographies and photography for our leadership team — including
+            our founders, clinical advisors, and assessment leads. Check back shortly, or reach out
+            directly to be introduced.
+          </p>
         </div>
-        <p className="mt-6 text-sm text-warm-grey italic text-center">
-          Add real photos and bios when ready.
-        </p>
       </Section>
     </>
   );

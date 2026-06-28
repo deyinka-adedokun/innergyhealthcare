@@ -31,6 +31,7 @@ export function SiteFooter() {
             <li><Link to="/employers" className="hover:text-[var(--gold)]">For Employers</Link></li>
             <li><Link to="/candidates" className="hover:text-[var(--gold)]">For Candidates</Link></li>
             <li><Link to="/about" className="hover:text-[var(--gold)]">About</Link></li>
+            <li><Link to="/resources" className="hover:text-[var(--gold)]">Resources</Link></li>
             <li><Link to="/contact" className="hover:text-[var(--gold)]">Contact</Link></li>
           </ul>
         </div>
