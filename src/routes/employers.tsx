@@ -227,6 +227,20 @@ function EmployersPage() {
           title="Ready to Discuss Your Workforce Needs?"
           intro="We welcome enquiries from care home groups, nursing homes, domiciliary care providers, healthcare recruitment agencies, and NHS/HSE-contracted facilities."
         />
+        <div className="bg-white border border-[var(--teal)]/30 rounded-sm p-5 flex items-start gap-4 max-w-4xl mb-6">
+          <div className="shrink-0 h-10 w-10 rounded-full bg-[var(--teal)]/10 flex items-center justify-center">
+            <Phone className="h-5 w-5 text-[var(--teal)]" />
+          </div>
+          <div>
+            <p className="text-sm font-semibold text-navy uppercase tracking-wide">Need Express Service?</p>
+            <p className="text-sm text-foreground/80 mt-1">
+              Call our direct line for immediate assistance:
+              <a href="tel:+2349052052136" className="ml-1.5 font-semibold text-[var(--teal)] underline underline-offset-2 hover:text-[var(--navy)] transition-colors">
+                +234 (905) 205-2136
+              </a>
+            </p>
+          </div>
+        </div>
         <EmployerForm />
       </Section>
     </>
