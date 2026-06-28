@@ -116,7 +116,7 @@ function Home() {
     <>
       {/* Hero */}
       <section className="relative bg-[var(--gold-tint)] overflow-hidden">
-        <div className="container-page py-16 md:py-24 grid lg:grid-cols-2 gap-12 items-center">
+        <div className="container-page py-16 md:py-24 grid md:grid-cols-2 gap-12 items-center">
           <div>
             <div className="text-xs font-semibold uppercase tracking-[0.18em] text-[var(--gold)] mb-5">
               Ethical International Healthcare Recruitment
