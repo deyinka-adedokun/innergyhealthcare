@@ -203,11 +203,12 @@ function AboutPage() {
               key={l.name}
               className="bg-white border border-border rounded-sm overflow-hidden flex flex-col"
             >
-              <div className="aspect-[4/5] bg-[var(--gold-tint)] overflow-hidden">
+              <div className="aspect-[3/4] bg-[var(--gold-tint)] overflow-hidden">
                 <img
                   src={l.photo}
                   alt={`Portrait of ${l.name}`}
-                  className="w-full h-full object-cover object-top"
+                  className="w-full h-full object-cover"
+                  style={{ objectPosition: "center 15%" }}
                   loading="lazy"
                 />
               </div>
