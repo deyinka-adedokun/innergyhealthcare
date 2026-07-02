@@ -7,6 +7,7 @@ import olufemi from "@/assets/innergy/team/olufemi.jpg.asset.json";
 import ainabor from "@/assets/innergy/team/ainabor.jpg.asset.json";
 import adewumi from "@/assets/innergy/team/adewumi.jpg.asset.json";
 import helen from "@/assets/innergy/team/helen.jpg.asset.json";
+import aduratomi from "@/assets/innergy/team/aduratomi.png.asset.json";
 
 const leaders = [
   {
