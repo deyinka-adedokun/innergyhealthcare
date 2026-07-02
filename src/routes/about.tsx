@@ -40,6 +40,12 @@ const leaders = [
     photo: helen.url,
     bio: "An accomplished operations leader, Helen drives operational excellence, process optimisation, quality assurance, and seamless global workforce coordination to support the company's international healthcare talent management and outsourcing services.",
   },
+  {
+    name: "Aduratomi",
+    role: "Travel & Mobility Coordinator",
+    photo: aduratomi.url,
+    bio: "Aduratomi manages the end-to-end travel and mobility experience for our deployed professionals — coordinating visa applications, flight bookings, ticketing, and pre-departure logistics so every candidate arrives at their placement smoothly and on schedule.",
+  },
 ];
 
 export const Route = createFileRoute("/about")({
