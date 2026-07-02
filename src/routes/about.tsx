@@ -2,6 +2,44 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Section, SectionHeading } from "@/components/site/Section";
 import hero from "@/assets/innergy/image10.jpeg.asset.json";
 import story from "@/assets/innergy/image11.jpeg.asset.json";
+import adeyinka from "@/assets/innergy/team/adeyinka.jpg.asset.json";
+import olufemi from "@/assets/innergy/team/olufemi.jpg.asset.json";
+import ainabor from "@/assets/innergy/team/ainabor.jpg.asset.json";
+import adewumi from "@/assets/innergy/team/adewumi.jpg.asset.json";
+import helen from "@/assets/innergy/team/helen.jpg.asset.json";
+
+const leaders = [
+  {
+    name: "Adeyinka Adedokun",
+    role: "Director of Partnerships",
+    photo: adeyinka.url,
+    bio: "Adeyinka Adedokun leads strategic relationships with UK and Ireland care providers and recruitment agencies to connect psychometrically assessed, ethically sourced Nigerian care professionals with employers facing critical workforce shortages.",
+  },
+  {
+    name: "Professor Olufemi A. Adegbesan",
+    role: "Strategic Advisor",
+    photo: olufemi.url,
+    bio: "A distinguished Professor of Sport Psychology, Professor Adegbesan leverages his expertise in behavioural science, mental resilience, leadership, and performance optimization to strengthen the development, well-being, and global readiness of our healthcare professionals.",
+  },
+  {
+    name: "Dr. Ainabor Augustine Eguavuon",
+    role: "Director of Training",
+    photo: ainabor.url,
+    bio: "A distinguished academic leader, Dr. Eguavuon leverages his expertise in curriculum development, quality assurance, and professional education to build internationally competent, practice-ready carers and allied health professionals for the global healthcare workforce.",
+  },
+  {
+    name: "Dr. Adewumi Oreoluwa, FCIHRM",
+    role: "Director of Global Talent",
+    photo: adewumi.url,
+    bio: "A distinguished global human capital executive, Dr. Adewumi leverages her expertise in international talent acquisition, workforce mobility, regulatory compliance, and strategic outsourcing to lead Innergy Healthcare's global sourcing, deployment, and optimization of world-class carers and allied health professionals.",
+  },
+  {
+    name: "Helen A.",
+    role: "Operations Manager",
+    photo: helen.url,
+    bio: "An accomplished operations leader, Helen drives operational excellence, process optimisation, quality assurance, and seamless global workforce coordination to support the company's international healthcare talent management and outsourcing services.",
+  },
+];
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -147,17 +185,34 @@ function AboutPage() {
       </Section>
 
       <Section>
-        <SectionHeading eyebrow="Leadership" title="Our Leadership" />
-        <div className="bg-white border border-border rounded-sm p-10 md:p-14 text-center max-w-3xl mx-auto">
-          <div className="inline-flex h-14 w-14 rounded-full bg-[var(--gold-tint)] border border-[var(--gold)]/40 items-center justify-center text-[var(--gold)] font-bold text-xl mb-5">
-            ✦
-          </div>
-          <h3 className="text-2xl font-semibold text-navy">Leadership profiles coming soon</h3>
-          <p className="mt-4 text-foreground/75 max-w-xl mx-auto">
-            We are finalising the biographies and photography for our leadership team — including
-            our founders, clinical advisors, and assessment leads. Check back shortly, or reach out
-            directly to be introduced.
-          </p>
+        <SectionHeading
+          eyebrow="Leadership"
+          title="Our Leadership"
+          intro="The people driving Innergy Healthcare's mission — combining decades of expertise in psychometric assessment, global talent mobility, clinical training, and operational excellence."
+        />
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {leaders.map((l) => (
+            <article
+              key={l.name}
+              className="bg-white border border-border rounded-sm overflow-hidden flex flex-col"
+            >
+              <div className="aspect-[4/5] bg-[var(--gold-tint)] overflow-hidden">
+                <img
+                  src={l.photo}
+                  alt={`Portrait of ${l.name}`}
+                  className="w-full h-full object-cover object-top"
+                  loading="lazy"
+                />
+              </div>
+              <div className="p-6 flex-1 flex flex-col">
+                <h3 className="text-lg font-semibold text-navy leading-snug">{l.name}</h3>
+                <div className="text-xs font-semibold uppercase tracking-[0.14em] text-[var(--gold)] mt-1">
+                  {l.role}
+                </div>
+                <p className="mt-4 text-[14px] leading-relaxed text-foreground/80">{l.bio}</p>
+              </div>
+            </article>
+          ))}
         </div>
       </Section>
     </>
