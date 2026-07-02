@@ -7,6 +7,7 @@ import olufemi from "@/assets/innergy/team/olufemi.jpg.asset.json";
 import ainabor from "@/assets/innergy/team/ainabor.jpg.asset.json";
 import adewumi from "@/assets/innergy/team/adewumi.jpg.asset.json";
 import helen from "@/assets/innergy/team/helen.jpg.asset.json";
+import aduratomi from "@/assets/innergy/team/aduratomi.png.asset.json";
 
 const leaders = [
   {
@@ -38,6 +39,12 @@ const leaders = [
     role: "Operations Manager",
     photo: helen.url,
     bio: "An accomplished operations leader, Helen drives operational excellence, process optimisation, quality assurance, and seamless global workforce coordination to support the company's international healthcare talent management and outsourcing services.",
+  },
+  {
+    name: "Aduratomi",
+    role: "Travel & Mobility Coordinator",
+    photo: aduratomi.url,
+    bio: "Aduratomi manages the end-to-end travel and mobility experience for our deployed professionals — coordinating visa applications, flight bookings, ticketing, and pre-departure logistics so every candidate arrives at their placement smoothly and on schedule.",
   },
 ];
 
@@ -196,11 +203,12 @@ function AboutPage() {
               key={l.name}
               className="bg-white border border-border rounded-sm overflow-hidden flex flex-col"
             >
-              <div className="aspect-[4/5] bg-[var(--gold-tint)] overflow-hidden">
+              <div className="aspect-[3/4] bg-[var(--gold-tint)] overflow-hidden">
                 <img
                   src={l.photo}
                   alt={`Portrait of ${l.name}`}
-                  className="w-full h-full object-cover object-top"
+                  className="w-full h-full object-cover"
+                  style={{ objectPosition: "center 15%" }}
                   loading="lazy"
                 />
               </div>
